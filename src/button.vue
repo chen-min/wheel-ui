@@ -1,7 +1,7 @@
 <template>
     <button class='wui-button' :class="{[`icon-${iconPosition}`]: true}"
     @click="$emit('click')">
-        <wui-icon class = 'icon' v-if="icon && !loading" :name="icon"></wui-icon> 
+        <wui-icon class = 'icon' v-if="icon && !loading" :name="icon"></wui-icon>
         <wui-icon class = 'loading icon' name='loading' v-if="loading"></wui-icon>   
         <div class="content">
           <slot></slot>
