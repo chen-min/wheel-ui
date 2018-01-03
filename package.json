@@ -1,16 +1,12 @@
 {
-  "name": "frank-test-1-1",
-  "version": "0.0.3",
-  "description": "这是一个UI框架",
+  "name": "Wheel UI",
+  "version": "1.0.3",
+  "description": "Wheel UI",
   "main": "dist/index.js",
   "scripts": {
     "start": "parcel index.html --no-cache",
     "dev-test": "parcel watch test/* --no-cache & karma start",
     "test": "parcel build test/* --no-cache --no-minify && karma start --single-run"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/FrankFang/frank-test-1.git"
   },
   "keywords": [
     "vue",
@@ -18,10 +14,6 @@
   ],
   "author": "frankfang",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/FrankFang/frank-test-1/issues"
-  },
-  "homepage": "https://github.com/FrankFang/frank-test-1#readme",
   "dependencies": {
     "vue": "^2.5.16",
     "vue-hot-reload-api": "^2.3.0"
