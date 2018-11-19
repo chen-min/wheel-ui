@@ -1,6 +1,8 @@
 <template>
-    <button class='g-button' :class="{[`icon-${iconPosition}`]: true}">
-        <svg v-if="icon" class="icon"><use :xlink:href="`#i-${icon}`"></use></svg>
+    <button class='g-button' :class="{[`icon-${iconPosition}`]: true}"
+    @click="$emit('click')">
+        <g-icon class = 'icon' v-if="icon && !loading" :name="icon"></g-icon> 
+        <g-icon class = 'loading icon' name='loading' v-if="loading"></g-icon>   
         <div class="content">
           <slot></slot>
         </div>
@@ -15,18 +17,22 @@
                 type: String,
                 default:"left",
                 validator(value) {
-                    if(value !=='left' && value !=='right'){
-                        return false
-                    } else {
-                        return true
-                    }
+                    return value === 'left' || value === 'right'
                 }
+            },
+            loading:{
+                type: Boolean,
+                default:false
             }
         }
     }
 </script>
 
 <style lang="scss" >
+    @keyframes spin {
+        0% {transform: rotate(0deg);}
+        100% {transform: rotate(360deg)}
+    }
     .g-button {
         vertical-align: middle;
         font-size: var(--font-size);
@@ -66,6 +72,10 @@
             }
         }
 
+
+    }
+    .loading {
+        animation: spin 2s infinite linear;
     }
 </style>
 

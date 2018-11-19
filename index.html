@@ -26,17 +26,16 @@
           }
     </style>
     <style>
-        .icon{width: 1em; height:1em;}
     </style>
 </head>
 <body>
     <div id="app"> 
-        <g-button icon="setting" icon-position=''>按钮</g-button>
-        <g-button icon='setting' icon-position='right'>按钮</g-button>
+        <g-button icon="setting" icon-position='left' :loading="loading1" @click="loading1 = !loading1">按钮</g-button>
+        <g-button icon='setting' icon-position='right' :loading="true">按钮</g-button>
 
     </div>
 <script src="./src/app.js"></script>
-<script src="//at.alicdn.com/t/font_923960_uiyprz7a8d.js">
+<script src="//at.alicdn.com/t/font_923960_281smdolpg6.js">
 </script>
 </body>
 </html>
