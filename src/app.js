@@ -16,7 +16,8 @@ new Vue({
 
 import chai from 'chai'
 const expect = chai.expect
-
+import spies from 'chai-spies'
+chai.use(spies)
 //单元测试
 {
     const Constructor  = Vue.extend(Button)
@@ -93,6 +94,7 @@ const expect = chai.expect
      button.$destroy
 } 
 {   
+    //mock
     const Constructor  = Vue.extend(Button)
     const gButton = new Constructor({
         propsData: {
@@ -100,12 +102,12 @@ const expect = chai.expect
         }
     }) 
     gButton.$mount() 
-    gButton.$on('click', function(){
-
-    })
+    let spy = chai.spy(() => {})
+    // gButton.$on('click', function(){
+    // })
+    gButton.$on('click', spy)
     let button =  gButton.$el
     button.click()
-     expect(order).to.equal('2')
-     button.$el.remove()
-     button.$destroy
+    expect(order).to.equal('2')
+    expect(spy).to.have.been.called()
 } 
