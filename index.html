@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>vue-wheel</title>
+    <title>wheel-UI</title>
     <style>
           * {margin:0; padding:0; box-sizing: border-box;}
           :root {
@@ -17,8 +17,6 @@
               --border-color: #999;
               /* --border-color-hover: #666; */
               --border-color-hover: red;
-
-
           }
           #app {
               margin: 20px;
@@ -32,17 +30,17 @@
 </head>
 <body>
     <div id="app"> 
-        <g-button icon="setting" icon-position='left' :loading="loading1" @click="loading1 = !loading1">按钮</g-button>
-        <g-button icon='setting' icon-position='right' :loading="true">按钮</g-button>
-        <g-button-group>
-            <g-button icon="left">上一页</g-button>
-            <g-button>更多</g-button>
-            <g-button icon="right">下一页</g-button>
-        </g-button-group>
+        <wui-button icon="setting" icon-position='left' :loading="loading1" @click="loading1 = !loading1">按钮</wui-button>
+        <wui-button icon='setting' icon-position='right' :loading="true">按钮</wui-button>
+        <wui-button-group>
+            <wui-button icon="left">上一页</wui-button>
+            <wui-button>更多</wui-button>
+            <wui-button icon="right">下一页</wui-button>
+        </wui-button-group>
         <div class="test"></div>
     </div>
 <script src="./src/app.js"></script>
-<script src="//at.alicdn.com/t/font_923960_281smdolpg6.js">
+<script src="//at.alicdn.com/t/font_1116013_65leiwtcw9o.js">
 </script>
 </body>
 </html>

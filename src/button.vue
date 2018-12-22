@@ -1,8 +1,8 @@
 <template>
-    <button class='g-button' :class="{[`icon-${iconPosition}`]: true}"
+    <button class='wui-button' :class="{[`icon-${iconPosition}`]: true}"
     @click="$emit('click')">
-        <g-icon class = 'icon' v-if="icon && !loading" :name="icon"></g-icon> 
-        <g-icon class = 'loading icon' name='loading' v-if="loading"></g-icon>   
+        <wui-icon class = 'icon' v-if="icon && !loading" :name="icon"></wui-icon> 
+        <wui-icon class = 'loading icon' name='loading' v-if="loading"></wui-icon>   
         <div class="content">
           <slot></slot>
         </div>
@@ -33,11 +33,11 @@
         0% {transform: rotate(0deg);}
         100% {transform: rotate(360deg)}
     }
-    .g-button {
-        vertical-align: middle;
+    .wui-button {
         font-size: var(--font-size);
         height: var(--button-height);
         padding: 0 1em;
+        vertical-align: top;
         border-radius: var(--border-radius);
         border: 1px solid var(--border-color);
         background: var(--button-bg);
@@ -65,7 +65,6 @@
                 order:2;
                 margin-right:0;
                 margin-left: 0.1em;
-
             }
             > .content {
                 order:1;
