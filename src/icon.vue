@@ -2,10 +2,13 @@
     <svg  class="wui-icon"><use :xlink:href="`#i-${name}`"></use></svg>
 </template>
 <script>
-export default {
-    props: ['name']
-}
+    import './svg'
+
+    export default {
+        name: 'WUIIcon',
+        props: ['name']
+    }
 </script>
-<style>
+<style lang="scss" scoped>
     .wui-icon{width: 1em; height:1em;}
 </style>

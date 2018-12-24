@@ -9,7 +9,9 @@
     </button>
 </template>
 <script>
+    import Icon from './icon'
     export default {
+        name: 'WUIButton',
         // props:['icon','iconPosition']
         props: {
             icon: {},
@@ -24,7 +26,11 @@
                 type: Boolean,
                 default:false
             }
-        }
+        },
+        components: {
+            'wui-icon': Icon
+        },
+
     }
 </script>
 
