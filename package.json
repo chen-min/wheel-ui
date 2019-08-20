@@ -1,7 +1,7 @@
 {
-  "name": "Wheel UI",
+  "name": "Wheel-UI",
   "version": "1.0.3",
-  "description": "Wheel UI",
+  "description": "Wheel-UI",
   "main": "dist/index.js",
   "scripts": {
     "start": "parcel index.html --no-cache",
@@ -16,10 +16,10 @@
   "license": "MIT",
   "dependencies": {
     "vue": "^2.5.16",
-    "vue-hot-reload-api": "^2.3.0"
+    "vue-hot-reload-api": "^2.3.3"
   },
   "devDependencies": {
-    "@vue/component-compiler-utils": "^2.0.0",
+    "@vue/component-compiler-utils": "^2.6.0",
     "chai": "^4.1.2",
     "chai-spies": "^1.0.0",
     "karma": "^2.0.4",
@@ -31,9 +31,10 @@
     "mocha": "^5.2.0",
     "node-sass": "^4.9.0",
     "parcel-bundler": "^1.9.3",
+    "sass": "^1.22.9",
     "sinon": "^6.0.1",
     "sinon-chai": "^3.2.0",
-    "vue-template-compiler": "^2.5.16"
+    "vue-template-compiler": "^2.6.10"
   },
   "alias": {
     "vue": "./node_modules/vue/dist/vue.common.js"
